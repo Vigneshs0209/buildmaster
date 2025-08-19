@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Us - BuildMaster</title>
+  <style>
+    body {
+      margin: 0;
+      
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 80vh;
+      background: url('images/con3.jpeg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    /* Contact Form Section - overlays hero */
+    .form-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -100px; /* makes form overlay hero */
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-form {
+      background: blueviolet;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      max-width: 90%;
+      text-align: center;
+      color: white;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+
+      /* Animation initial state */
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.6s ease-out;
+    }
+
+    .contact-form.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 6px;
+      background: #ffffff;
+      color: rgb(110, 105, 105);
+      font-size: 1rem;
+      
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: blueviolet;
+      color: #ffffff;
+      
+    }
+
+    /* Info Section */
+    .info-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+    }
+
+    .info-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .info-image {
+      flex: 3;
+    }
+
+    .info-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .info-text {
+      flex: 2;
+      text-align: center; /* center text for all devices */
+    }
+
+    .info-text h3 {
+      font-size: 2rem;
+      position: relative;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .info-text h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: blue; /* underline color */
+      margin: 8px auto 0; /* centers underline */
+    }
+
+    .info-details {
+      margin-top: 20px;
+    }
+
+    .info-details div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      justify-content: center; /* center details */
+    }
+
+    .info-details i {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      color: blue; /* icons are blue everywhere */
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .info-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .info-section:nth-child(even) {
+        flex-direction: column;
+      }
+      .info-text {
+        margin-top: 20px;
+      }
+    }
+  </style>
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BuildMaster</div>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="restoration.html">Restoration</a></li>
+            <li><a href="residential.html">Residential</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    CONTACT US
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="form-section">
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Mobile Number" required>
+      <button type="submit">Send</button>
+    </div>
+  </section>
+
+  <!-- Info Section 1 -->
+  <section class="info-section">
+    <div class="info-image">
+      <img src="images/con1.jpeg" alt="Office Building">
+    </div>
+    <div class="info-text">
+      <h3>Our Office</h3>
+      <div class="info-details">
+        <div><i class="fas fa-map-marker-alt"></i> Location: Hyderabad</div>
+        <div><i class="fas fa-phone"></i> Phone: +91 98765 43210</div>
+        <div><i class="fas fa-envelope"></i> Email: info@buildmaster.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section 2 -->
+  <section class="info-section">
+    <div class="info-image">
+      <img src="images/con2.jpeg" alt="Construction Site">
+    </div>
+    <div class="info-text">
+      <h3>Our Branch</h3>
+      <div class="info-details">
+        <div><i class="fas fa-map-marker-alt"></i> Location: Bangalore</div>
+        <div><i class="fas fa-phone"></i> Phone: +91 98765 67890</div>
+        <div><i class="fas fa-envelope"></i> Email: branch@buildmaster.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const form = document.querySelector(".contact-form");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(form);
+  </script>
+  <footer class="footer">
+  <div class="footer-left">
+    <h2>Stay Connected</h2>
+    <p>Subscribe to our newsletter and get the latest updates on our projects and services.</p>
+  </div>
+
+  <div class="footer-right">
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</footer>
+
+</body>
+</html>

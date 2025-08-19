@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - BuildMaster</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+ 
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+/* 
+    .gallery-container {
+      width: 100%;
+      padding: 50px 20px;
+      background: #f8f9fa;
+    } */
+
+    .gallery-container h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-family: "Lucida Sans", sans-serif;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 50px;
+      padding: 0px;
+
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+      /* opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease; */
+    }
+
+    .gallery-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .gallery-item h3 {
+      font-size: 1.2rem;
+      margin: 15px 0 10px;
+    }
+
+    .gallery-item p {
+      font-size: 0.95rem;
+      color: #555;
+      padding: 0 15px 20px;
+    }
+
+    /* .gallery-item:hover {
+      transform: translateY(-5px);
+    } */
+
+    /* Desktop - 4 images per row */
+    @media (min-width: 1025px) {
+    .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 40px; /* desktop side padding */
+  }
+}
+
+/* Tablet - 3 images per row */
+    @media (max-width: 1024px) and (min-width: 769px) {
+    .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 30px;
+  }
+}
+
+/* Mobile - 2 images per row and center align */
+    @media (max-width: 768px) {
+    .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px; /* auto centering with equal side padding */
+    gap: 20px;
+  }
+}
+
+  .gallery-item img {
+    height: 160px; /* smaller images for mobile */
+  }
+
+  .gallery-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .gallery-item p {
+    font-size: 0.8rem;
+  }
+  .gallery-container h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 10px;
+    
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">BuildMaster</div>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="restoration.html">Restoration</a></li>
+            <li><a href="residential.html">Residential</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-container">
+    <h1>Our Project Gallery</h1>
+
+    <!-- First Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/ab2.jpeg" alt="Gallery Image 1">
+        <h3>Modern Villa</h3>
+        <p>Luxury villa project with contemporary architecture.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/abt1 (1).png" alt="Gallery Image 2">
+        <h3>Office Complex</h3>
+        <p>High-tech office complex designed for efficiency.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/abt1 (2).png" alt="Gallery Image 3">
+        <h3>Apartment Tower</h3>
+        <p>Residential tower with modern amenities and comfort.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Charminar.jpeg" alt="Gallery Image 4">
+        <h3>Heritage Restoration</h3>
+        <p>Reviving historic structures with care and precision.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/echo.jpeg" alt="Gallery Image 6">
+        <h3>Eco Homes</h3>
+        <p>Sustainable homes built with eco-friendly materials.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/luxury.jpeg" alt="Gallery Image 7">
+        <h3>Resort Project</h3>
+        <p>Luxurious resort built with natural surroundings in mind.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/bridge.jpeg" alt="Gallery Image 8">
+        <h3>Bridge Work</h3>
+        <p>Strong and reliable bridge construction projects.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/office.jpeg" alt="Gallery Image 9">
+        <h3>Commercial Space</h3>
+        <p>Modern commercial complexes for businesses of all sizes.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Charminar.jpeg" alt="Gallery Image 10">
+        <h3>Luxury Residence</h3>
+        <p>Premium residences blending elegance and functionality.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/mall.jpeg" alt="Gallery Image 5">
+        <h3>Shopping Mall</h3>
+        <p>Spacious mall designed with a modern shopping experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-left">
+    <h2>Stay Connected</h2>
+    <p>Subscribe to our newsletter and get the latest updates on our projects and services.</p>
+  </div>
+
+  <div class="footer-right">
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</footer>
+
+</body>
+</html>
+

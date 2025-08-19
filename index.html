@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Construction Co.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BuildMaster</div>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="restoration.html">Restoration</a></li>
+            <li><a href="residential.html">Residential</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="carousel">
+      <div class="slide active"> <img src="images/Architecture and construction ai generated _ Premium AI-generated image.jpeg" alt="Construction Project 1"> </div>
+      <div class="slide"> <img src="images/download.jpeg" alt="Construction Project 2"> </div>
+      <div class="slide"> <img src="images/Protection Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="Construction Project 3"> </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+    <div class="hero-text">
+      <h1>Building the Future, Restoring the Past</h1>
+      <p>Your trusted partner in construction excellence.</p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-gallery">
+      <img src="images/civil.jpeg" alt="Project 1">
+      <img src="images/special.jpeg" alt="Project 2">
+      <img src="images/pic1.jpeg" alt="Project 3">
+    </div>
+  </section>
+
+<section class="services-section">
+  <h2>Our Expertise</h2>
+
+  <!-- Tabs -->
+  <div class="service-tabs">
+    <button class="service-btn" data-service="building">Building</button>
+    <button class="service-btn" data-service="civil">Civil Infrastructure</button>
+    <button class="service-btn" data-service="heavy">Heavy Buildings</button>
+    <button class="service-btn" data-service="special">Special Projects</button>
+  </div>
+
+  <!-- Content -->
+  <div class="service-content">
+    <div class="service-image">
+      <img src="images/Builder Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="Building" id="service-image">
+    </div>
+    <div class="service-text">
+      <p id="service-description">
+        We construct modern, sustainable buildings that combine aesthetics with durability.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials">
+  <h2>Happy Customers</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-track">
+
+      <div class="testimonial">
+        <img src="images/c1.jpeg" alt="John Doe">
+        <p>"Kerala Construction transformed our space beyond expectations!"</p>
+        <strong>- John Doe</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c2.jpeg" alt="Sarah Lee">
+        <p>"Professional, timely, and reliable construction team."</p>
+        <strong>- Sarah Lee</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c3.jpeg" alt="Rajesh Kumar">
+        <p>"Quality workmanship and attention to detail."</p>
+        <strong>- Rajesh Kumar</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c4.jpeg" alt="Priya Menon">
+        <p>"They made the process so easy and stress-free."</p>
+        <strong>- Priya Menon</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c5.jpeg" alt="Alex Smith">
+        <p>"Highly recommended for any construction project."</p>
+        <strong>- Alex Smith</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c6.jpeg" alt="Aisha Thomas">
+        <p>"Affordable prices without compromising on quality."</p>
+        <strong>- Aisha Thomas</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c7.jpeg" alt="Manish Verma">
+        <p>"They turned our dream home into reality."</p>
+        <strong>- Manish Verma</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c8.jpeg" alt="Anjali Sharma">
+        <p>"Fast delivery and perfect execution."</p>
+        <strong>- Anjali Sharma</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c10 (1).jpeg" alt="Michael Brown">
+        <p>"Great team, great results!"</p>
+        <strong>- Michael Brown</strong>
+      </div>
+
+      <div class="testimonial">
+        <img src="images/c10 (2).jpeg" alt="Neha Kapoor">
+        <p>"We couldn’t be happier with the results."</p>
+        <strong>- Neha Kapoor</strong>
+      </div>
+
+      <!-- Duplicate set for infinite loop -->
+      <!-- Just copy the same testimonials above here -->
+    </div>
+  </div>
+</section>
+
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required />
+      <input type="text" name="district" placeholder="District" required />
+      <input type="text" name="state" placeholder="State" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+<footer class="footer">
+  <div class="footer-left">
+    <h2>Stay Connected</h2>
+    <p>Subscribe to our newsletter and get the latest updates on our projects and services.</p>
+  </div>
+
+  <div class="footer-right">
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</footer>
+
+
+
+ 
+</body>
+</html>
+
